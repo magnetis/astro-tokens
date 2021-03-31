@@ -1,0 +1,13 @@
+os: linux
+dist: xenial
+language: node_js
+node_js:
+- '12'
+
+jobs:
+  include:
+  - stage: Lint
+    if: type = pull_request
+    install:
+    - yarn install
+    script: yarn lint && yarn tsc --noEmit
