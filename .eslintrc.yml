@@ -1,0 +1,31 @@
+---
+root: true
+
+parser: '@typescript-eslint/parser'
+
+extends:
+  - prettier
+  - prettier/@typescript-eslint
+  - prettier/react
+
+plugins:
+  - prettier
+  - '@typescript-eslint'
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+    modules: true
+
+env:
+  node: true
+  jest: true
+
+globals:
+  __DEV__: true
+
+rules:
+  no-undef: 2
+  no-unused-vars: 0
+  "@typescript-eslint/no-unused-vars": 2
+  prettier/prettier: 2
