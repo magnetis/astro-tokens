@@ -18,6 +18,7 @@ jobs:
     - yarn install
     deploy:
       provider: npm
+      email: $NPM_EMAIL
       api_token:
         secure: $NPM_KEY
       cleanup: false
