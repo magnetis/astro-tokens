@@ -2,7 +2,7 @@ os: linux
 dist: xenial
 language: node_js
 node_js:
-- '12'
+- lts/*
 
 jobs:
   include:
@@ -11,3 +11,15 @@ jobs:
     install:
     - yarn install
     script: yarn lint && yarn tsc --noEmit
+
+  - stage: Deploy to NPM
+    if: tag IS present
+    install:
+    - yarn install
+    deploy:
+      provider: npm
+      api_token:
+        secure: $NPM_KEY
+      cleanup: false
+      on:
+        tags: true
