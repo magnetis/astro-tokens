@@ -1,10 +1,10 @@
 {
   "name": "@magnetis/astro-tokens",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Magnetis (https://github.com/magnetis)",
   "homepage": "https://astro.magnetis.com.br/",
   "description": "Design Tokens of Magnetis Astro",
-  "main": "dist/index.ts",
+  "main": "src/index.ts",
   "publishConfig": {
     "access": "public"
   },
