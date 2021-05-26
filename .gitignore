@@ -105,3 +105,6 @@ dist
 
 # VSCode local config
 .vscode
+
+# OS things
+*.DS_Store
