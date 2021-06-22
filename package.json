@@ -1,6 +1,6 @@
 {
   "name": "@magnetis/astro-tokens",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "author": "Magnetis (https://github.com/magnetis)",
   "homepage": "https://astro.magnetis.com.br/",
   "description": "Design Tokens of Magnetis Astro",
@@ -28,13 +28,9 @@
     "lint": "eslint ./src --ext .ts",
     "test": "echo skip tests",
     "prepare": "husky install",
-    "publish": "yarn webpack && npm publish"
+    "deploy": "yarn webpack && npm publish"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "eslint": "^7.28.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "typescript": "^4.1.2",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
