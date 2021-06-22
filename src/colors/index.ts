@@ -105,15 +105,7 @@ type Venus = typeof venus[VenusKeys];
 
 type Color = Earth | Mars | Moon | Space | Sun | Uranus | Venus;
 
-type ColorsMap = Record<EarthKeys, Earth> &
-  Record<MarsKeys, Mars> &
-  Record<MoonKeys, Moon> &
-  Record<SpaceKeys, Space> &
-  Record<SunKeys, Sun> &
-  Record<UranusKeys, Uranus> &
-  Record<VenusKeys, Venus>;
-
-export const colors: ColorsMap = {
+export const colors = {
   ...earth,
   ...mars,
   ...moon,
