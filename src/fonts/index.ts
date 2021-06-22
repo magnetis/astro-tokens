@@ -15,6 +15,6 @@ const secondary = {
 type SecondaryKeys = keyof typeof secondary;
 type Secondary = typeof secondary[SecondaryKeys];
 
-export const fonts = { ...primary, ...secondary };
+export const fonts = { ...primary, ...secondary } as const;
 
 export type { Primary, Secondary };

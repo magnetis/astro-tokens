@@ -113,6 +113,6 @@ export const colors = {
   ...sun,
   ...uranus,
   ...venus,
-};
+} as const;
 
 export type { Color };

@@ -36,7 +36,7 @@ type Gradient = {
 
 type GradientID = keyof Gradient;
 
-export const gradients: Gradient = {
+export const gradients = {
   sombrero: [uranus400, earth200],
   hoag: ['#fff56a', '#ffd265'],
   pinwheel: [moon400, '#bac8d1'],
@@ -48,6 +48,6 @@ export const gradients: Gradient = {
   centaurus: [venus400, venus700],
   cartwheel: [uranus600, uranus400],
   mayall: [mars300, mars400],
-};
+} as const;
 
 export type { Gradient, GradientColor, GradientID };
