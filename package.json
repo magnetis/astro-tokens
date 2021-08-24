@@ -4,8 +4,8 @@
   "author": "Magnetis (https://github.com/magnetis)",
   "homepage": "https://astro.magnetis.com.br/",
   "description": "Design Tokens of Magnetis Astro",
-  "main": "./dist",
-  "types": "./dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -13,9 +13,6 @@
   "bugs": {
     "url": "https://github.com/magnetis/astro-tokens/issues"
   },
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/magnetis/astro-tokens"
@@ -23,6 +20,11 @@
   "keywords": [
     "design-system",
     "tokens"
+  ],
+  "files": [
+    "lib",
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "lint": "eslint ./src --ext .ts",
