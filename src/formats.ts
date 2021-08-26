@@ -51,10 +51,7 @@ const fontCssValues: Format = {
       fileHeader({ file } as FileHeaderArgs) +
       dictionary.allTokens
         .filter(isTypographyToken)
-        .map(
-          (token) =>
-            `export const ${token.name} = ${JSON.stringify(token.value)};`
-        )
+        .map((token) => `export const ${token.name} = ${JSON.stringify(token.value)};`)
         .join('\n')
     );
   },
@@ -82,14 +79,10 @@ const shadowStyled: Format = {
     const shadowObj: { [key: string]: any } = {};
 
     dictionary.allTokens
-      .filter(
-        (token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!)
-      )
+      .filter((token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!))
       .forEach(function (token) {
         const key = token!.attributes!.item!;
-        const name = `${token!.attributes!.subitem}${(
-          token!.attributes!.state || ''
-        ).toUpperCase()}`;
+        const name = `${token!.attributes!.subitem}${(token!.attributes!.state || '').toUpperCase()}`;
 
         shadowObj[key] = Object.assign({}, shadowObj[key], {
           [name]: token.value,
@@ -99,17 +92,12 @@ const shadowStyled: Format = {
     Object.keys(shadowObj).forEach((key) => {
       const item = shadowObj[key];
       item.value = `${item.offsetX}px ${item.offsetY}px ${item.radius}px 0 ${item.color}`;
-      item.elevation =
-        SHADOW_TOKEN_ELEVATION_MAP[
-          key as keyof typeof SHADOW_TOKEN_ELEVATION_MAP
-        ];
+      item.elevation = SHADOW_TOKEN_ELEVATION_MAP[key as keyof typeof SHADOW_TOKEN_ELEVATION_MAP];
     });
 
     const output = JSON.stringify(shadowObj, null, 2);
 
-    return (
-      fileHeader({ file } as FileHeaderArgs) + `module.exports = ${output};`
-    );
+    return fileHeader({ file } as FileHeaderArgs) + `module.exports = ${output};`;
   },
 };
 
@@ -120,14 +108,10 @@ const shadowTypes: Format = {
     const typesObj: { [key: string]: any } = {};
 
     dictionary.allTokens
-      .filter(
-        (token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!)
-      )
+      .filter((token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!))
       .forEach(function (token) {
         const key = token!.attributes!.item!;
-        const name = `${token!.attributes!.subitem}${(
-          token!.attributes!.state || ''
-        ).toUpperCase()}`;
+        const name = `${token!.attributes!.subitem}${(token!.attributes!.state || '').toUpperCase()}`;
         const tokenType = getStaticType(token.type, options);
 
         typesObj[key] = Object.assign({}, typesObj[key], {
@@ -143,10 +127,7 @@ const shadowTypes: Format = {
 
     const result = JSON.stringify(typesObj, null, 2).replace(/"/g, '');
 
-    const output = [
-      `export default ${moduleName};`,
-      `declare const ${moduleName}: ${result};`,
-    ];
+    const output = [`export default ${moduleName};`, `declare const ${moduleName}: ${result};`];
 
     return fileHeader({ file } as FileHeaderArgs) + output.join('\n');
   },
@@ -165,17 +146,11 @@ const tsModuleFlatDeclarations: Format = {
 
     const result = JSON.stringify(tokens, null, 2).replace(/"/g, '');
 
-    const output = [
-      `export default ${moduleName};`,
-      `declare const ${moduleName}: ${result};`,
-    ];
+    const output = [`export default ${moduleName};`, `declare const ${moduleName}: ${result};`];
 
     // JSON stringify will quote strings, because this is a type we need
     // it unquoted.
-    return (
-      fileHeader({ file } as FileHeaderArgs) +
-      output.join('\n').replace(/"DesignToken"/g, 'DesignToken')
-    );
+    return fileHeader({ file } as FileHeaderArgs) + output.join('\n').replace(/"DesignToken"/g, 'DesignToken');
   },
 };
 
