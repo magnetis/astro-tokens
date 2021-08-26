@@ -1,10 +1,4 @@
-import {
-  camelCase,
-  isBorderToken,
-  isBorderRadiusToken,
-  isShadowToken,
-  isTypographyToken,
-} from './helpers';
+import { camelCase, isBorderToken, isBorderRadiusToken, isShadowToken, isTypographyToken } from './helpers';
 
 import type { Transform, Token } from './types';
 
@@ -22,9 +16,7 @@ const itemSubitemCamel: Transform = {
   matcher: isShadowToken,
   transformer: function (token, options) {
     const tokenPaths = [...token.path];
-    return camelCase(
-      [options?.prefix].concat(tokenPaths.slice(2, tokenPaths.length)).join(' ')
-    );
+    return camelCase([options?.prefix].concat(tokenPaths.slice(2, tokenPaths.length)).join(' '));
   },
 };
 
@@ -33,11 +25,7 @@ const typeItemCamel: Transform = {
   type: 'name',
   matcher: isTypographyOrBorderOrRadiusToken,
   transformer: function (token, options) {
-    return camelCase(
-      [options?.prefix]
-        .concat(token.path.slice(1, token.path.length - 1))
-        .join(' ')
-    );
+    return camelCase([options?.prefix].concat(token.path.slice(1, token.path.length - 1)).join(' '));
   },
 };
 
