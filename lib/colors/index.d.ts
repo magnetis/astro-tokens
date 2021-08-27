@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 26 Aug 2021 18:16:36 GMT
+ * Generated on Fri, 27 Aug 2021 18:26:12 GMT
  */
 
 export const solidFaintDarkest: string;
@@ -18,16 +18,16 @@ export const solidPrimaryDark: string;
 export const solidPrimaryMedium: string;
 export const solidPrimaryLight: string;
 export const solidPrimaryLightest: string;
-export const solidWarningDarkest: string;
-export const solidWarningDark: string;
-export const solidWarningMedium: string;
-export const solidWarningLight: string;
-export const solidWarningLightest: string;
 export const solidAlertDarkest: string;
 export const solidAlertDark: string;
 export const solidAlertMedium: string;
 export const solidAlertLight: string;
 export const solidAlertLightest: string;
+export const solidWarningDarkest: string;
+export const solidWarningDark: string;
+export const solidWarningMedium: string;
+export const solidWarningLight: string;
+export const solidWarningLightest: string;
 export const solidSuccessDarkest: string;
 export const solidSuccessDark: string;
 export const solidSuccessMedium: string;
@@ -60,15 +60,15 @@ export const transparentPrimarySoft: string;
 export const transparentPrimarySofter: string;
 export const transparentPrimaryClear: string;
 export const transparentPrimarySemitransparent: string;
-export const transparentErrorSemiopaque: string;
-export const transparentErrorDiffuse: string;
-export const transparentErrorStronger: string;
-export const transparentErrorStrong: string;
-export const transparentErrorMedium: string;
-export const transparentErrorSoft: string;
-export const transparentErrorSofter: string;
-export const transparentErrorClear: string;
-export const transparentErrorSemitransparent: string;
+export const transparentAlertSemiopaque: string;
+export const transparentAlertDiffuse: string;
+export const transparentAlertStronger: string;
+export const transparentAlertStrong: string;
+export const transparentAlertMedium: string;
+export const transparentAlertSoft: string;
+export const transparentAlertSofter: string;
+export const transparentAlertClear: string;
+export const transparentAlertSemitransparent: string;
 export const transparentWarningSemiopaque: string;
 export const transparentWarningDiffuse: string;
 export const transparentWarningStronger: string;
