@@ -41,17 +41,9 @@ StyleDictionaryPackage.registerTransform(transforms.typeItemCamel);
 
 StyleDictionaryPackage.registerTransformGroup({
   name: 'styled',
-  transforms: [
-    'attribute/cti',
-    'name/ti/camel',
-    'name/type-item/camel',
-    'name/item-subitem/camel',
-    'color/css',
-  ],
+  transforms: ['attribute/cti', 'name/ti/camel', 'name/type-item/camel', 'name/item-subitem/camel', 'color/css'],
 });
 
-const StyleDictionary = StyleDictionaryPackage.extend(
-  getStyleDictionaryConfig()
-);
+const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig());
 
 StyleDictionary.buildAllPlatforms();
