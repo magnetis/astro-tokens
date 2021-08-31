@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 27 Aug 2021 18:26:12 GMT
+ * Generated on Tue, 31 Aug 2021 18:10:35 GMT
  */
 
 export default sizes;
@@ -9,6 +9,7 @@ declare const sizes: {
   nano: number;
   micro: number;
   mini: number;
+  tiny: number;
   smaller: number;
   small: number;
   medium: number;
