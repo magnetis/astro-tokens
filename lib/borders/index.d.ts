@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 31 Aug 2021 18:10:35 GMT
+ * Generated on Wed, 15 Sep 2021 22:41:57 GMT
  */
 
 export default borders;
