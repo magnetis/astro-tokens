@@ -1,6 +1,6 @@
 version: 2
 updates:
-- package-ecosystem: npm
+- package-ecosystem: yarn
   directory: "/"
   schedule:
     interval: daily
@@ -14,32 +14,6 @@ updates:
   - murillo94
   - julianosbento
   - an-mag
-  - pleaobraga
-  - carlosberti
   - lopesalysson
   - pedro-cerdera
-  - caiogodoi
-  assignees:
-  - victorheringer
-  - murillo94
-  - julianosbento
-  - an-mag
-  - pleaobraga
-  - carlosberti
-  - lopesalysson
-  - pedro-cerdera
-  - caiogodoi
-  ignore:
-  - dependency-name: eslint
-    versions:
-    - 7.23.0
-    - 7.24.0
-  - dependency-name: eslint-config-prettier
-    versions:
-    - 8.2.0
-  - dependency-name: "@typescript-eslint/parser"
-    versions:
-    - 4.21.0
-  - dependency-name: "@typescript-eslint/eslint-plugin"
-    versions:
-    - 4.21.0
+  - lucianomlima
