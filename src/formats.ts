@@ -1,8 +1,19 @@
 import StyleDictionaryPackage from 'style-dictionary';
-import type { FileHeaderArgs, Format, Token } from './types';
+import type { Attributes, FileHeaderArgs, Format, Token } from './types';
+
+type CSSStyledShadowObject = Attributes & {
+  radius: number;
+  color: string;
+  offsetX: number;
+  offsetY: number;
+  value: string;
+  elevation: number | 'number';
+};
 
 import { isTypographyToken, getStaticType } from './helpers';
+
 const { fileHeader } = StyleDictionaryPackage.formatHelpers;
+
 const SHADOW_TOKEN_FILTER = ['type', 'spread'];
 const SHADOW_TOKEN_ELEVATION_MAP = {
   tight: 3,
@@ -76,7 +87,7 @@ const fontCssTypes: Format = {
 const shadowStyled: Format = {
   name: 'shadow/styled',
   formatter: function ({ dictionary, file }) {
-    const shadowObj: { [key: string]: any } = {};
+    const shadowObj: { [key: string]: CSSStyledShadowObject } = {};
 
     dictionary.allTokens
       .filter((token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!))
@@ -105,7 +116,7 @@ const shadowTypes: Format = {
   name: 'shadow/types',
   formatter: function ({ dictionary, file, options }) {
     const { moduleName = 'tokens' } = options;
-    const typesObj: { [key: string]: any } = {};
+    const typesObj: { [key: string]: CSSStyledShadowObject } = {};
 
     dictionary.allTokens
       .filter((token) => !SHADOW_TOKEN_FILTER.includes(token!.attributes!.subitem!))
