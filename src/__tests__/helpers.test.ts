@@ -10,7 +10,7 @@ import {
 } from '../helpers';
 
 describe('helpers', () => {
-  describe('camelCase', () => {
+  describe('camelCase()', () => {
     it('returns string in camel case style', () => {
       expect(camelCase('teste')).toBe('teste');
       expect(camelCase('teste-online')).toBe('testeOnline');
@@ -20,7 +20,7 @@ describe('helpers', () => {
     });
   });
 
-  describe('getStaticType', () => {
+  describe('getStaticType()', () => {
     it('returns type when token type is static', () => {
       const options = {
         isStaticType: true,
@@ -44,7 +44,7 @@ describe('helpers', () => {
     });
   });
 
-  describe('isBorderToken', () => {
+  describe('isBorderToken()', () => {
     it('returns true when token category is borders', () => {
       const token = {
         attributes: {
@@ -66,7 +66,7 @@ describe('helpers', () => {
     });
   });
 
-  describe('isBorderRadiusToken', () => {
+  describe('isBorderRadiusToken()', () => {
     it('returns true when token category is borders', () => {
       const token = {
         attributes: {
@@ -88,7 +88,7 @@ describe('helpers', () => {
     });
   });
 
-  describe('isShadowToken', () => {
+  describe('isShadowToken()', () => {
     it('returns true when token category is effect and type is shadow', () => {
       const token = {
         attributes: {
@@ -122,7 +122,7 @@ describe('helpers', () => {
     });
   });
 
-  describe('isTypographyToken', () => {
+  describe('isTypographyToken()', () => {
     it('returns true when token type is equal subitem', () => {
       const token = {
         attributes: {

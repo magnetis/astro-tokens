@@ -15,9 +15,7 @@ function camelCase(input: string) {
 }
 
 function isStaticType(value?: boolean) {
-  return (
-    typeof value !== 'undefined' && typeof value === 'boolean' && value === true
-  );
+  return typeof value !== 'undefined' && typeof value === 'boolean' && value === true;
 }
 
 function getStaticType(tokenType: string, options: Options): StaticType {
@@ -36,10 +34,7 @@ function isBorderRadiusToken(token: Token) {
 }
 
 function isShadowToken(token: Token) {
-  return (
-    token!.attributes!.category === 'effect' &&
-    token!.attributes!.type === 'shadow'
-  );
+  return token!.attributes!.category === 'effect' && token!.attributes!.type === 'shadow';
 }
 
 function isTypographyToken(token: Token) {
@@ -48,11 +43,4 @@ function isTypographyToken(token: Token) {
   return camelCase(tokenType) === tokenSubitem;
 }
 
-export {
-  camelCase,
-  getStaticType,
-  isBorderToken,
-  isBorderRadiusToken,
-  isShadowToken,
-  isTypographyToken,
-};
+export { camelCase, getStaticType, isBorderToken, isBorderRadiusToken, isShadowToken, isTypographyToken };
