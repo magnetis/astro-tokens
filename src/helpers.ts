@@ -1,4 +1,4 @@
-import ChangeCase from 'change-case';
+import * as changeCase from 'change-case';
 import type { Token, Options } from './types';
 
 type TokenTypes = keyof typeof TOKEN_TYPES;
@@ -9,18 +9,20 @@ const TOKEN_TYPES = {
 };
 
 function camelCase(input: string) {
-  return ChangeCase.camelCase(input, {
-    transform: ChangeCase.camelCaseTransformMerge,
+  return changeCase.camelCase(input, {
+    transform: changeCase.camelCaseTransformMerge,
   });
 }
 
 function isStaticType(value?: boolean) {
-  return typeof value !== 'undefined' && typeof value === 'boolean' && value === true;
+  return (
+    typeof value !== 'undefined' && typeof value === 'boolean' && value === true
+  );
 }
 
-function getStaticType(tokenType: TokenTypes, options: Options): StaticType {
+function getStaticType(tokenType: string, options: Options): StaticType {
   if (isStaticType(options.isStaticType)) {
-    return TOKEN_TYPES[tokenType] || tokenType;
+    return TOKEN_TYPES[tokenType as TokenTypes] || tokenType;
   }
   return tokenType || 'string';
 }
@@ -34,7 +36,10 @@ function isBorderRadiusToken(token: Token) {
 }
 
 function isShadowToken(token: Token) {
-  return token!.attributes!.category === 'effect' && token!.attributes!.type === 'shadow';
+  return (
+    token!.attributes!.category === 'effect' &&
+    token!.attributes!.type === 'shadow'
+  );
 }
 
 function isTypographyToken(token: Token) {
@@ -43,4 +48,11 @@ function isTypographyToken(token: Token) {
   return camelCase(tokenType) === tokenSubitem;
 }
 
-export { camelCase, getStaticType, isBorderToken, isBorderRadiusToken, isShadowToken, isTypographyToken };
+export {
+  camelCase,
+  getStaticType,
+  isBorderToken,
+  isBorderRadiusToken,
+  isShadowToken,
+  isTypographyToken,
+};
