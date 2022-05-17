@@ -7,7 +7,6 @@
     "stripInternal": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "types": ["node"],
     "noEmit": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
