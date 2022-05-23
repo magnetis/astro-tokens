@@ -134,7 +134,7 @@ describe('helpers', () => {
       expect(isTypographyToken(token)).toBe(true);
     });
 
-    it('returns false when token category is effect and type is different than shadow', () => {
+    it('returns false when token type is different than subitem', () => {
       const token = {
         attributes: {
           type: 'token_type',
