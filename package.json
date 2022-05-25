@@ -32,6 +32,7 @@
     "lint:fix": "eslint --fix ./src --ext .ts",
     "test": "jest --verbose --maxWorkers=50%",
     "test:watch": "jest --watch --verbose --maxWorkers=25%",
+    "test:ci": "jest --ci --bail --runInBand",
     "prepare": "husky install",
     "deploy": "npm publish",
     "build": "node --experimental-specifier-resolution=node --loader ts-node/esm build.ts && prettier -w lib"
