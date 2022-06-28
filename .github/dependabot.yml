@@ -10,9 +10,10 @@ updates:
     separator: "-"
   open-pull-requests-limit: 10
   reviewers:
-  - julianosbento
   - lopesalysson
   - pedro-cerdera
   - lucianomlima
   - albertozaranza
   - Michele-Camargo
+  - RaissaMagnetis
+  - devjonathansouzasi
