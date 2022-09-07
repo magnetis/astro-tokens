@@ -10,10 +10,4 @@ updates:
     separator: "-"
   open-pull-requests-limit: 10
   reviewers:
-  - lopesalysson
-  - pedro-cerdera
-  - lucianomlima
-  - albertozaranza
-  - Michele-Camargo
-  - RaissaMagnetis
-  - devjonathansouzasi
+  - 'magnetis/frontend'
