@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 15 Sep 2021 22:41:57 GMT
+ * Generated on Fri, 14 Jul 2023 21:18:11 GMT
  */
 
 export const solidFaintDarkest: string;
