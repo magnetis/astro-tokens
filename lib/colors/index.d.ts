@@ -1,8 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 14 Jul 2023 21:18:11 GMT
+ * Generated on Mon, 31 Jul 2023 14:44:47 GMT
  */
 
+export const solidFaintBlack: string;
 export const solidFaintDarkest: string;
 export const solidFaintDarker: string;
 export const solidFaintDark: string;
@@ -13,6 +14,7 @@ export const solidBrightMedium: string;
 export const solidBrightLight: string;
 export const solidBrightLighter: string;
 export const solidBrightLightest: string;
+export const solidBrightWhite: string;
 export const solidPrimaryDarkest: string;
 export const solidPrimaryDark: string;
 export const solidPrimaryMedium: string;
