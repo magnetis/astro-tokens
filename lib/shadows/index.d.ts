@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 14 Jul 2023 21:18:11 GMT
+ * Generated on Mon, 31 Jul 2023 14:44:47 GMT
  */
 
 export default shadows;
