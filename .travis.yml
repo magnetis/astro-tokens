@@ -2,25 +2,25 @@ os: linux
 dist: xenial
 language: node_js
 node_js:
-- lts/*
+  - lts/*
 
 jobs:
   include:
-  - stage: Lint
-    if: type = pull_request
-    install:
-    - yarn install
-    script: yarn lint && yarn tsc --noEmit
+    - stage: Lint
+      if: type = pull_request
+      install:
+        - yarn install
+      script: yarn lint && yarn tsc --noEmit
 
-  - stage: Deploy to NPM
-    if: tag IS present
-    install:
-    - yarn install
-    deploy:
-      provider: npm
-      email: $NPM_EMAIL
-      api_token:
-        secure: $NPM_KEY
-      cleanup: false
-      on:
-        tags: true
+    - stage: Deploy to NPM
+      if: tag IS present
+      install:
+        - yarn install
+      deploy:
+        provider: npm
+        email: $NPM_EMAIL
+        api_token:
+          secure: $NPM_KEY
+        cleanup: false
+        on:
+          tags: true

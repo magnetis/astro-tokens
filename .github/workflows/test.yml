@@ -8,17 +8,17 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
+
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      
+
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      
+
       - name: Linting
         run: yarn lint && yarn tsc --noEmit
-      
+
       - name: Testing
         run: yarn test:ci
